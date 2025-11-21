@@ -25,7 +25,18 @@ const typeDefs = `
         isMarried: Boolean
     }
     `
-const resolvers = ''
+const resolvers = {
+    Query: {
+        getUsers: () => {
+            return users;
+        },
+        getUserById: (parent, args) => {
+            const id = args.id;
+            return users.find((user) => user.id === id)
+        }
+    },
+    Mutation: {}
+}
 
 const server = new ApolloServer({ typeDefs, resolvers })
 
