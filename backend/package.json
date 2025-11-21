@@ -9,5 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@apollo/server": "^5.1.0",
+    "graphql": "^16.12.0"
+  }
 }
