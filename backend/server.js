@@ -1,6 +1,13 @@
 import { ApolloServer } from "@apollo/server"
 import { startStandaloneServer } from "@apollo/server/standalone"
 
+const users = [
+    { id: '1', name: 'Alice', age: 30, isMarried: false },
+    { id: '2', name: 'Bob', age: 25, isMarried: true },
+    { id: '3', name: 'Charlie', age: 35, isMarried: false }
+];
+
+
 const typeDefs = `
     type Query {
         getUsers: [User]
